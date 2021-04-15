@@ -5,7 +5,7 @@ App({
     const logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-
+    this.getIconFont();
     // 登录
     wx.login({
       success: res => {
@@ -15,5 +15,14 @@ App({
   },
   globalData: {
     userInfo: null
+  },
+  getIconFont: () => {
+    wx.loadFontFace({
+      global: true,
+      family: "iconfont",
+      source: "url('https://oss.flywen.top/iconfont.ttf')",
+      success: (res) => console.log(res.status),
+      fail: (res) => console.log(res.status)
+    })
   }
 })
