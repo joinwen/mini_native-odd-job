@@ -1,23 +1,87 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}" calss="userinfo-opendata">
-      <view class="userinfo-avatar" bindtap="bindViewTap">
-        <open-data type="userAvatarUrl"></open-data>
-      </view>
-      <open-data type="userNickName"></open-data>
-    </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
-    </block>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<view class="index-container">
+  <view class="header-wrapper">
+    <view class="search-wrapper">
+      <van-search
+        class="search"
+        input-align="center"
+        placeholder="在这里搜索 你想要的的我都有~"
+        background="#ff336b"
+      >
+      </van-search>
+    </view>
+    <view class="carousel-wrapper">
+      <swiper>
+        <block wx:for="{{carouselList}}" wx:key="*this">
+          <swiper-item>
+            <view class="carousel-item" bind:longtap="handleMenuTap">
+              <image class="carousel-item-image" src="{{item}}"></image>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+
+  <view class="menu-wrapper">
+      <block wx:for="{{menuList}}" wx:key="*this">
+        <view class="menu-item">
+          <image class="menu-item-image" src="{{item.path}}"></image>
+          <text class="menu-item-title">{{item.label}}</text>
+        </view>
+      </block>
+  </view>
+  <view class="banner-wrapper">
+    <image class="banner-image" src="/assets/images/index/banner.png"></image>
+  </view>
+
+  <view class="time-limit-wrapper">
+
+  </view>
+  <view class="hot-wrapper">
+    <view class="goods-item" wx:for="{{hotList}}" wx:key="*this">
+      <image class="goods-item-image" src="{{ item.img }}"></image>
+      <text class="goods-item-title">{{ item.title }}</text>
+      <view class="goods-item-badge">
+        <image src="/assets/images/index/hot.png"></image>
+        <text>免单</text>
+      </view>
+      <view class="goods-item-money">
+        <view class="goods-item-money-left">
+          <text>￥{{ item.hotPrice }}</text>
+          <text>￥{{ item.price }}</text>
+        </view>
+        <view class="goods-item-money-right">
+          <image src="/assets/images/index/share.png"></image>
+          <text>赚{{ item.earning }}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="ground-wrapper">
+    <view class="ground-caption">
+      <image class="ground-caption-image" src="/assets/images/index/ground.png"></image>
+    </view>
+    <view class="ground-content">
+      <view class="goods-item" wx:for="{{groundList}}" wx:key="*this">
+        <image class="goods-item-image" src="{{ item.img }}"></image>
+        <text class="goods-item-title">{{ item.title }}</text>
+        <view class="goods-item-badge">
+          <image src="/assets/images/index/hot.png"></image>
+          <text>免单</text>
+        </view>
+        <view class="goods-item-money">
+          <view class="goods-item-money-left">
+            <text>￥{{ item.hotPrice }}</text>
+            <text>￥{{ item.price }}</text>
+          </view>
+          <view class="goods-item-money-right">
+            <image src="/assets/images/index/share.png"></image>
+            <text>赚{{ item.earning }}</text>
+          </view>
+        </view>
+      </view>
+    </view>
   </view>
 </view>

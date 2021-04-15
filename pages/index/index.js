@@ -1,48 +1,133 @@
 // index.js
 // 获取应用实例
-const app = getApp()
+const app = getApp();
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    canIUseGetUserProfile: false,
-    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') // 如需尝试获取用户信息可改为false
-  },
-  // 事件处理函数
-  bindViewTap() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
+    searchValue: "&#xe86b;",
+    carouselList: [
+      "/assets/images/index/carousel-1.png",
+      "/assets/images/index/carousel-2.png"
+    ],
+    menuList: [
+      {
+        path: "/assets/images/index/menu-1.png",
+        label: "新人任务"
+      },
+      {
+        path: "/assets/images/index/menu-2.png",
+        label: "0元"
+      },
+      {
+        path: "/assets/images/index/menu-3.png",
+        label: "高提成"
+      },
+      {
+        path: "/assets/images/index/menu-4.png",
+        label: "地板价"
+      },
+    ],
+    hotList: [
+      {
+        img: "/assets/images/index/hot-1.jpg",
+        title: "[ 高中复习 ] 有必要吗？",
+        price: "199.00",
+        hotPrice: "0.00",
+        earning: "3.98"
+      },
+      {
+        img: "/assets/images/index/hot-1.jpg",
+        title: "[ 高中复习 ] 有必要吗？",
+        price: "199.00",
+        hotPrice: "0.00",
+        earning: "3.98"
+      },
+      {
+        img: "/assets/images/index/hot-1.jpg",
+        title: "[ 高中复习 ] 有必要吗？",
+        price: "199.00",
+        hotPrice: "0.00",
+        earning: "3.98"
+      },
+      {
+        img: "/assets/images/index/hot-1.jpg",
+        title: "[ 高中复习 ] 有必要吗？",
+        price: "199.00",
+        hotPrice: "0.00",
+        earning: "3.98"
+      },
+      {
+        img: "/assets/images/index/hot-1.jpg",
+        title: "[ 高中复习 ] 有必要吗？",
+        price: "199.00",
+        hotPrice: "0.00",
+        earning: "3.98"
+      },
+      {
+        img: "/assets/images/index/hot-1.jpg",
+        title: "[ 高中复习 ] 有必要吗？",
+        price: "199.00",
+        hotPrice: "0.00",
+        earning: "3.98"
+      },
+    ],
+    groundList: [
+      {
+        img: "/assets/images/index/ground-1.jpg",
+        title: "[ 玻尿酸 ] 限时抢购中？",
+        price: "199.00",
+        hotPrice: "0.00",
+        earning: "3.98"
+      },
+      {
+        img: "/assets/images/index/ground-2.jpg",
+        title: "[ 玻尿酸 ] 限时抢购中？",
+        price: "199.00",
+        hotPrice: "0.00",
+        earning: "3.98"
+      },
+      {
+        img: "/assets/images/index/ground-1.jpg",
+        title: "[ 玻尿酸 ] 限时抢购中？",
+        price: "199.00",
+        hotPrice: "0.00",
+        earning: "3.98"
+      },
+      {
+        img: "/assets/images/index/ground-2.jpg",
+        title: "[ 玻尿酸 ] 限时抢购中？",
+        price: "199.00",
+        hotPrice: "0.00",
+        earning: "3.98"
+      },
+      {
+        img: "/assets/images/index/ground-1.jpg",
+        title: "[ 玻尿酸 ] 限时抢购中？",
+        price: "199.00",
+        hotPrice: "0.00",
+        earning: "3.98"
+      },
+      {
+        img: "/assets/images/index/ground-2.jpg",
+        title: "[ 玻尿酸 ] 限时抢购中？",
+        price: "199.00",
+        hotPrice: "0.00",
+        earning: "3.98"
+      }
+    ]
   },
   onLoad() {
-    if (wx.getUserProfile) {
-      this.setData({
-        canIUseGetUserProfile: true
-      })
-    }
+    this.getIconFont();
   },
-  getUserProfile(e) {
-    // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
-    wx.getUserProfile({
-      desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
-      success: (res) => {
-        console.log(res)
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
+  getIconFont: () => {
+    wx.loadFontFace({
+      global: true,
+      family: "iconfont",
+      source: "url('https://oss.flywen.top/iconfont.ttf')",
     })
   },
-  getUserInfo(e) {
-    // 不推荐使用getUserInfo获取用户信息，预计自2021年4月13日起，getUserInfo将不再弹出弹窗，并直接返回匿名的用户个人信息
-    console.log(e)
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
+  handleMenuTap(e) {
+    debugger;
+    console.log("tap happend");
   }
-})
+});
