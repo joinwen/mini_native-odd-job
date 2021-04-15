@@ -2,35 +2,39 @@
   "pages":[
     "pages/index/index",
     "pages/personal/personal",
-    "pages/million"
+    "pages/million/million"
   ],
   "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#ff045a",
     "list": [
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "",
-        "selectedIconPath": ""
+        "iconPath": "pages/index/icon.png",
+        "selectedIconPath": "pages/index/icon-active.png"
       },
       {
         "pagePath": "pages/million/million",
         "text": "百万年薪",
-        "iconPath": "",
-        "selectedIconPath": ""
+        "iconPath": "pages/million/icon.png",
+        "selectedIconPath": "pages/million/icon-active.png"
       },
       {
         "pagePath": "pages/personal/personal",
         "text": "个人",
-        "iconPath": "",
-        "selectedIconPath": ""
+        "iconPath": "pages/personal/icon.png",
+        "selectedIconPath": "pages/personal/icon-active.png"
       }
     ]
   },
   "window":{
+    "backgroundColor": "#fff",
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarBackgroundColor": "#ff336b",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
