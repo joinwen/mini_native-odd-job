@@ -1,0 +1,220 @@
+/* 宽度 */
+.w-0 {
+  width: 0em;
+}
+.w-1 {
+  width: 1em;
+}
+.w-2 {
+  width: 2em;
+}
+.w-3 {
+  width: 3em;
+}
+.w-4 {
+  width: 4em;
+}
+.w-full {
+  width: 100%;
+}
+
+/* 高度 */
+.h-0 {
+  height: 0em;
+}
+.h-1 {
+  height: 1em;
+}
+.h-2 {
+  height: 2em;
+}
+.h-3 {
+  height: 3em;
+}
+.h-4 {
+  height: 4em;
+}
+.h-full {
+  height: 100%;
+}
+
+/* text-align */
+.tx-align-left {
+  text-align: left;
+}
+.tx-align-right {
+  text-align: right;
+}
+.tx-align-center {
+  text-align: center;
+}
+.tx-align-justify {
+  text-align: justify;
+}
+
+/* display */
+.flex {
+  display: flex;
+}
+.block {
+  display: block;
+}
+.inline {
+  display: inline;
+}
+.inline-block {
+  display: inline-block;
+}
+.inline-flex {
+  display: inline-flex;
+}
+.hidden {
+  display: none;
+}
+
+/* visible */
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+/* float */
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after,
+.clearfix:before {
+  content: "";
+  display: table;
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+
+/* place-content */
+[class^="place"] {
+  display: flex;
+}
+
+.place-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.place-center-between {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.place-center-around {
+  align-items: center;
+  justify-content: space-around;
+}
+
+.place-center-evenly {
+  align-items: center;
+  justify-content: space-evenly;
+}
+.place-center-start {
+  align-items: center;
+  justify-content: flex-start;
+}
+.place-center-end {
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* flex value */
+.flex-1 {
+  flex: 1 1 auto;
+}
+.flex-1-0 {
+  flex: 1 0 auto;
+}
+.flex-0-1 {
+  flex: 0 1 auto;
+}
+
+/* margin */
+.m-auto {
+  margin: auto;
+}
+.m-x-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.m-y-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* position */
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+
+/* position value */
+.all-0 {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+.l-0 {
+  left: 0;
+}
+.r-0 {
+  right: 0;
+}
+.x-0 {
+  left: 0;
+  top: 0;
+}
+.t-0 {
+  top: 0;
+}
+.b-0 {
+  bottom: 0;
+}
+.y-0 {
+  bottom: 0;
+}
+.l-50 {
+  left: 50%;
+}
+.r-50 {
+  right: 50%;
+}
+.t-50 {
+  top: 50%;
+}
+.b-50 {
+  bottom: 50%;
+}
+
+/* transform */
+.translate-x-50 {
+  transform: translateX(-50%);
+}
+.translate-y-50 {
+  transform: translateY(-50%);
+}
+
+
+

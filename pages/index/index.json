@@ -1,5 +1,9 @@
 {
   "usingComponents": {
     "van-search": "@vant/weapp/search/index"
-  }
+  },
+  "backgroundColor": "#ff336b",
+  "backgroundColorTop": "#ff336b",
+  "backgroundColorBottom": "#f3f3f5",
+  "navigationStyle": "custom"
 }

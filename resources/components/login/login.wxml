@@ -1,0 +1,8 @@
+<page-container
+  show="{{theVisible}}"
+  position="right"
+  overlay="{{true}}"
+  custom-style="z-index:1000;background: red"
+>
+  <button bind:tap="handleLogin">登录</button>
+</page-container>

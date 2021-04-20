@@ -1,4 +1,9 @@
 {
   "usingComponents": {
-  }
+    "van-empty": "@vant/weapp/empty/index"
+  },
+  "navigationStyle": "custom",
+  "backgroundColor": "#f46733",
+  "backgroundColorTop": "#f46733",
+  "backgroundColorBottom": "#fbded0"
 }

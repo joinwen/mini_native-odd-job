@@ -1,15 +1,18 @@
 /**index.wxss**/
+.index-container {
+  background-color: #f3f3f5;
+}
 .header-bg {
   width: 750rpx;
   position: fixed;
   top: 0;
   bottom: 0;
   z-index: -1;
-  background-image: linear-gradient(180deg, #ff336b 0%, #fff 160px, #f4f4f4 100%);
+  background-image: linear-gradient(180deg, #ff336b 0%, #f3f3f5 160px, #f3f3f5 100%);
 }
 
 .header-wrapper {
-  background-image: linear-gradient(180deg, #ff336b 0%, #fff 80%);
+  background-image: linear-gradient(180deg, #ff336b 0%, #f3f3f5 80%);
 }
 
 .search-wrapper {
@@ -80,7 +83,7 @@
 .hot-wrapper {
   display: flex;
   margin: 0 32rpx;
-  padding: 0 32rpx 9rpx;
+  padding: 32rpx 32rpx 9rpx;
   flex-wrap: wrap;
   background: #fff;
   justify-content: space-between;

@@ -1,6 +1,7 @@
 <!--index.wxml-->
+<page>
 <view class="index-container">
-  <view class="header-wrapper">
+  <view class="header-wrapper" style="padding-top: {{statusHeight}}">
     <view class="search-wrapper">
       <van-search
         class="search"
@@ -32,7 +33,7 @@
       </block>
   </view>
   <view class="banner-wrapper">
-    <image class="banner-image" src="/assets/images/index/banner.png"></image>
+    <image class="banner-image" src="/resources/assets/images/index/banner.png"></image>
   </view>
 
   <view class="time-limit-wrapper">
@@ -43,7 +44,7 @@
       <image class="goods-item-image" src="{{ item.img }}"></image>
       <text class="goods-item-title">{{ item.title }}</text>
       <view class="goods-item-badge">
-        <image src="/assets/images/index/hot.png"></image>
+        <image src="/resources/assets/images/index/hot.png"></image>
         <text>免单</text>
       </view>
       <view class="goods-item-money">
@@ -52,7 +53,7 @@
           <text>￥{{ item.price }}</text>
         </view>
         <view class="goods-item-money-right">
-          <image src="/assets/images/index/share.png"></image>
+          <image src="/resources/assets/images/index/share.png"></image>
           <text>赚{{ item.earning }}</text>
         </view>
       </view>
@@ -61,14 +62,14 @@
 
   <view class="ground-wrapper">
     <view class="ground-caption">
-      <image class="ground-caption-image" src="/assets/images/index/ground.png"></image>
+      <image class="ground-caption-image" src="/resources/assets/images/index/ground.png"></image>
     </view>
     <view class="ground-content">
       <view class="goods-item" wx:for="{{groundList}}" wx:key="*this">
         <image class="goods-item-image" src="{{ item.img }}"></image>
         <text class="goods-item-title">{{ item.title }}</text>
         <view class="goods-item-badge">
-          <image src="/assets/images/index/hot.png"></image>
+          <image src="/resources/assets/images/index/hot.png"></image>
           <text>免单</text>
         </view>
         <view class="goods-item-money">
@@ -77,7 +78,7 @@
             <text>￥{{ item.price }}</text>
           </view>
           <view class="goods-item-money-right">
-            <image src="/assets/images/index/share.png"></image>
+            <image src="/resources/assets/images/index/share.png"></image>
             <text>赚{{ item.earning }}</text>
           </view>
         </view>
@@ -85,3 +86,4 @@
     </view>
   </view>
 </view>
+</page>

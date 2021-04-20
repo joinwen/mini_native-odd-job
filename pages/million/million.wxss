@@ -1,0 +1,138 @@
+page {
+  background-color: #fbded0;
+  padding-bottom: 20rpx;
+}
+.header-wrapper {
+  height: 915rpx;
+}
+
+.header-carousel image {
+  width: 620rpx;
+  height: 250rpx;
+}
+
+.header-carousel swiper {
+  height: 250rpx;
+}
+
+.header-carousel swiper-item {
+  width: 672rpx !important;
+}
+
+.profile-wrapper {
+  padding: 32rpx 21rpx;
+  color: #ff8747;
+}
+
+.profile-item-value {
+  border-right: 2px solid #afafaf;
+}
+
+.profile-item-label {
+  margin-top: 23rpx;
+}
+
+.profile-item-value text{
+  color: #ff4b59;
+  font-size: 60rpx;
+  font-weight: 600;
+}
+
+.profile-item:last-child .profile-item-value {
+  border: none;
+}
+
+.profile-action {
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+}
+
+.profile-action button {
+  width: 600rpx;
+  height: 115rpx;
+  line-height: 115rpx;
+  border-radius: 50rpx;
+  font-size: 54rpx;
+  color: #fff;
+  background-image: linear-gradient(90deg, #ffa630 0%,#ff7d00 20%, #ff2a00 100%);
+}
+
+.statics-wrapper {
+  margin: 0 20rpx;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 16rpx;
+}
+.statics-control {
+  margin: 42rpx 144rpx;
+  display: flex;
+}
+.statics-control view {
+  width: 214rpx;
+  height: 73rpx;
+  line-height: 73rpx;
+  text-align: center;
+}
+
+.active-control {
+  background-color: #fea347;
+  color: #fff;
+}
+
+.active-control-1 {
+  border-bottom-left-radius: 35rpx;
+  border-top-left-radius: 35rpx;
+}
+
+.active-control-2 {
+  border-bottom-right-radius: 35rpx;
+  border-top-right-radius: 35rpx;
+}
+
+.inactive-control {
+  color: #fea347;
+  box-sizing: border-box;
+  border: 1rpx solid #fea347;
+}
+
+.inactive-control-1 {
+  border-top-left-radius: 35rpx;
+  border-bottom-left-radius: 35rpx;
+}
+
+.inactive-control-2 {
+  border-top-right-radius: 35rpx;
+  border-bottom-right-radius: 35rpx;
+}
+.statics-content-wrapper {
+  padding: 0 28rpx;
+}
+
+.statics-head {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20rpx;
+  margin-bottom: 38rpx;
+  border-bottom: 1px solid #efefef;
+}
+
+.statics-head view {
+  color: #fea347;
+  text-align: center;
+  width: 33.33%;
+}
+
+.statics-body {
+  margin-bottom: 20rpx;
+}
+
+.statics-body-item {
+  color: #666666;
+  display: flex;
+}
+
+.statics-body-item > view {
+  width: 33.33%;
+  text-align: center;
+  margin-bottom: 49rpx;
+}

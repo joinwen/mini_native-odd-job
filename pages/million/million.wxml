@@ -1,0 +1,60 @@
+<page>
+  <view class="header-wrapper relative">
+    <image class="w-full h-full" src="/resources/assets/images/million/header-bg.png"></image>
+    <view class="header-carousel absolute w-full b-0">
+      <swiper>
+        <swiper-item class="tx-align-center" wx:for="{{levelList}}" wx:key="*this">
+          <image src="{{item}}"></image>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+  <view class="profile-wrapper">
+    <view class="profile-content flex">
+      <view class="profile-item flex-1" wx:for="{{profileList}}" wx:key="*this">
+        <text class="block profile-item-value tx-align-center"><text>{{item.value}}</text>元</text>
+        <text class="block profile-item-label tx-align-center">{{item.label}}</text>
+      </view>
+    </view>
+    <view class="profile-action">
+      <button>立即拓展团队</button>
+    </view>
+  </view>
+  <view class="statics-wrapper">
+    <view class="statics-control">
+      <view class="{{activeControl == 1 ? 'active-control active-control-1' : 'inactive-control inactive-control-1'}}" bind:tap="handleStaticsChange" data-index="1">
+        <text>累计贡献</text>
+      </view>
+      <view class="{{activeControl == 2 ? 'active-control active-control-2' : 'inactive-control inactive-control-2'}}" bind:tap="handleStaticsChange" data-index="2">
+        <text>昨日贡献</text>
+      </view>
+    </view>
+    <view class="statics-content-wrapper">
+      <view class="statics-head">
+        <view>
+          <text>排名</text>
+        </view>
+        <view>
+          <text>昵称</text>
+        </view>
+        <view>
+          <text>贡献</text>
+        </view>
+      </view>
+      <view class="statics-body">
+        <view class="statics-body-item" wx:for="{{staticsList}}" wx:key="index">
+          <view>
+            <text>{{item.index}}</text>
+          </view>
+          <view>
+            <text>{{item.nickname}}</text>
+          </view>
+          <view>
+            <text>{{item.value}}元</text>
+          </view>
+        </view>
+        <van-empty wx:if="{{staticsList.length == 0}}" image="error" description="无内容" />
+      </view>
+    </view>
+  </view>
+</page>
